@@ -1,0 +1,22 @@
+title: "Baudouin — Research & Engineering"
+description: "CFD • Scientific Computing • ML • Quant"
+url: ""
+baseurl: ""
+theme: null
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+sass:
+  style: compressed
+collections:
+  posts:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      permalink: /blog/:title/

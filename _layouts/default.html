@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}" title="{{ site.title }}">
+  <script>
+    (() => {
+      const set = (m) => document.documentElement.dataset.theme = m;
+      const pref = localStorage.getItem('theme');
+      if (pref) set(pref); else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) set('dark');
+      window.toggleTheme = () => { const next = (document.documentElement.dataset.theme === 'dark') ? 'light' : 'dark'; localStorage.setItem('theme', next); set(next); };
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/pages/projects' | relative_url }}">Projects</a>
+        <a href="{{ '/pages/publications' | relative_url }}">Publications</a>
+        <a href="{{ '/pages/bubble-solver' | relative_url }}">Bubble Solver</a>
+        <a href="{{ '/pages/blog' | relative_url }}">Blog</a>
+        <a href="{{ '/cv/cv.pdf' | relative_url }}" target="_blank">CV</a>
+        <a href="{{ '/pages/contact' | relative_url }}">Contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">◐</button>
+      </nav>
+    </div>
+  </header>
+  <main class="content wrap">
+    {{ content }}
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© {{ 'now' | date: '%Y' }} {{ site.title }} — Built with Jekyll & GitHub Pages</small>
+    </div>
+  </footer>
+</body>
+</html>
