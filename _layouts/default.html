@@ -19,15 +19,15 @@
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <img class="brand-avatar" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="Headshot">
+        <span class="brand-text">{{ site.title }}</span>
+      </a>
       <nav class="nav">
         <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/pages/projects' | relative_url }}">Projects</a>
         <a href="{{ '/pages/publications' | relative_url }}">Publications</a>
-        <a href="{{ '/pages/bubble-solver' | relative_url }}">Bubble Solver</a>
         <a href="{{ '/pages/blog' | relative_url }}">Blog</a>
-        <a href="{{ '/cv/cv.pdf' | relative_url }}" target="_blank">CV</a>
-        <a href="{{ '/pages/contact' | relative_url }}">Contact</a>
+        <a href="{{ '/cv/cv.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
         <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">◐</button>
       </nav>
     </div>
