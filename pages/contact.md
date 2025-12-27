@@ -5,6 +5,11 @@ permalink: /pages/contact
 ---
 # Contact
 
-- Email: <a href="mailto:you@example.com">you@example.com</a>  
-- GitHub: <a href="https://github.com/yourusername" target="_blank">@yourusername</a>  
-- LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Profile</a>
+Contact details are now included on the **Home** page.
+
+<p><a href="{{ '/' | relative_url }}">Go to Home →</a></p>
+
+---
+
+- Email: <a href="mailto:baudouinfonkwa@gmail.com">baudouinfonkwa@gmail.com</a>
+- GitHub: <a href="https://github.com/baudouinfonkwa" target="_blank" rel="noopener noreferrer">@baudouinfonkwa</a>

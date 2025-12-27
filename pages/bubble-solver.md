@@ -5,6 +5,8 @@ permalink: /pages/bubble-solver
 ---
 # Rayleigh–Plesset Bubble Solver
 
+<p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
+
 This interactive tool numerically integrates the Rayleigh–Plesset equation for a single spherical bubble in a liquid:
 $$
 \rho \left(R \, \ddot R + \tfrac{3}{2} \dot R^2\right) = \big(p_g(R) + p_v - p_\infty(t)\big) - \frac{4\mu \dot R}{R} - \frac{2\sigma}{R},
