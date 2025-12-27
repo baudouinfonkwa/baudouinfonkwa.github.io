@@ -5,7 +5,7 @@ title: "Home"
 
 <section class="hero">
   <div>
-    <h1>Baudouin — CFD &amp; Scientific Computing • ML • Quant</h1>
+    <h1>Baudouin — CFD &amp; Scientific Computing • AI/ML • HPC</h1>
     <p class="muted">I build numerical methods and software for multiphase flows, HPC, and data-driven physics. I also explore ML systems and scientific machine learning.</p>
     <p>
       <a href="#projects">See projects →</a> ·
