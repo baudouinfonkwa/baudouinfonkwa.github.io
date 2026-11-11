@@ -1,7 +1,10 @@
 title: "Baudouin Fonkwa, Ph.D."
-description: "CFD • Scientific Computing • A/ML • HPC"
-url: ""
+description: "Computational fluid dynamics, multiphase flow, scientific computing, and HPC"
+url: "https://baudouinfonkwa.github.io"
 baseurl: ""
+lang: en
+author: Baudouin Fonkwa
+timezone: America/Detroit
 theme: null
 markdown: kramdown
 plugins:
@@ -10,9 +13,6 @@ plugins:
   - jekyll-sitemap
 sass:
   style: compressed
-collections:
-  posts:
-    output: true
 defaults:
   - scope:
       path: ""
@@ -20,3 +20,8 @@ defaults:
     values:
       layout: post
       permalink: /blog/:title/
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

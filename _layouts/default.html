@@ -3,41 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title | default: site.title }}</title>
   {% seo %}
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="alternate" type="application/atom+xml" href="{{ '/feed.xml' | relative_url }}" title="{{ site.title }}">
   <script>
     (() => {
       const set = (m) => document.documentElement.dataset.theme = m;
-      const pref = localStorage.getItem('theme');
+      let pref;
+      try { pref = localStorage.getItem('theme'); } catch (error) {}
       if (pref) set(pref); else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) set('dark');
-      window.toggleTheme = () => { const next = (document.documentElement.dataset.theme === 'dark') ? 'light' : 'dark'; localStorage.setItem('theme', next); set(next); };
+      window.toggleTheme = () => {
+        const next = (document.documentElement.dataset.theme === 'dark') ? 'light' : 'dark';
+        try { localStorage.setItem('theme', next); } catch (error) {}
+        set(next);
+      };
     })();
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="{{ '/' | relative_url }}">
-        <img class="brand-avatar" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="Headshot">
+        <img class="brand-avatar" src="{{ '/assets/img/headshot.jpg' | relative_url }}" alt="">
         <span class="brand-text">{{ site.title }}</span>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/' | relative_url }}#projects">Work</a>
         <a href="{{ '/pages/publications' | relative_url }}">Publications</a>
         <a href="{{ '/pages/blog' | relative_url }}">Blog</a>
-        <a href="{{ '/cv/cv.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">CV</a>
-        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">◐</button>
+        <a href="{{ '/cv/cv.pdf' | relative_url }}">CV</a>
+        <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle light or dark theme" title="Toggle light or dark theme">◐</button>
       </nav>
     </div>
   </header>
-  <main class="content wrap">
+  <main id="main-content" class="content wrap">
     {{ content }}
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <small>© {{ 'now' | date: '%Y' }} {{ site.title }} — Built with Jekyll & GitHub Pages</small>
+      <small>© {{ 'now' | date: '%Y' }} {{ site.title }} · Built with Jekyll &amp; GitHub Pages</small>
     </div>
   </footer>
 </body>

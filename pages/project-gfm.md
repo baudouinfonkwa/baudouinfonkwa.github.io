@@ -16,7 +16,4 @@ High-level summary of a Ghost Fluid / multi-material approach for compressible f
 ## Why it matters
 Accurate interface treatment and stable coupling are critical for shock-driven fluid–solid interaction problems (e.g., impact, blast loading, cavitation-induced deformation).
 
-## Status
-This page is a living summary; I’m adding a public, reproducible mini-demo and write-up.
-
 <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>

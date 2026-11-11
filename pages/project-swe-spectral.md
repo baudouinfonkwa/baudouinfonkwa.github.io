@@ -16,7 +16,4 @@ Implementation notes and experiments on spectral methods for the shallow water e
 ## Why it matters
 Spectral methods can achieve high accuracy per degree of freedom for global atmospheric and geophysical flows, but require careful treatment of stability, dealiasing, and time stepping.
 
-## Status
-This page will be expanded with a small reproducible code and example outputs.
-
 <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>

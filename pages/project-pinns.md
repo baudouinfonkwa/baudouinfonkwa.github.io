@@ -16,7 +16,4 @@ Exploration of physics-informed neural networks (PINNs) for PDEs with an emphasi
 ## Why it matters
 PINNs can work well in some regimes and fail badly in others; making progress requires careful measurement, controlled experiments, and an honest accounting of failure modes.
 
-## Status
-I’m consolidating this work into a small, reproducible repo with clear run commands and plots.
-
 <p><a href="{{ '/' | relative_url }}">← Back to Home</a></p>
