@@ -25,6 +25,12 @@ permalink: /pages/publications
 }</code></pre>
 </details>
 
+## Preprint
+
+**Baudouin Fonkwa** and Eric Johnsen. “Equilibrium preservation of shear discontinuities in compressible flows.” Preprint (2026); under review at *Journal of Computational Physics*.
+
+[Read the preprint (PDF)]({{ '/papers/fonkwa-johnsen-2026-shear-equilibrium-preprint.pdf' | relative_url }})
+
 ## Selected conference presentations
 
 - **APS Division of Fluid Dynamics**, Houston, TX — November 2025. “A fluid-solid diffuse interface model with phase field for compressible viscoplastic flows.”
