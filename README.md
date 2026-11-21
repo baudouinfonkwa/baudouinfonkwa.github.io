@@ -5,10 +5,13 @@ Jekyll source for <https://baudouinfonkwa.github.io>.
 ## Content
 
 - `index.md`: homepage and selected work.
-- `pages/project-compas.md`: public COMPAS contribution and source links.
+- `pages/project-compas.md`: six-equation fluid results and public COMPAS contribution.
+- `pages/project-sixeq-hypere.md`: hyperelastic/viscoplastic solid simulation results and core equations; no private solver source.
+- `assets/simulations/`: selected archived simulation figures and browser-playable movies.
 - `pages/publications.md`: verified journal citation and selected presentations.
 - `_posts/`: published scientific computing notes, named `YYYY-MM-DD-title.md`.
-- `pages/bubble-solver.md`: interactive Rayleigh–Plesset demo.
+- `pages/bubble-solver.md`: Rayleigh–Plesset / Keller–Miksis demo with Neo-Hookean elasticity.
+- `assets/js/bubble-*.js`: numerical model, worker, and self-contained SVG plotting interface.
 - `cv/cv.pdf`: downloadable CV.
 - `_layouts/` and `assets/css/style.css`: page layout and styling.
 

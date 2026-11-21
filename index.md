@@ -8,8 +8,9 @@ description: "Baudouin Fonkwa — computational fluid dynamics, multiphase flow,
   <div>
     <p class="eyebrow">CFD · Scientific Computing · HPC</p>
     <h1>Numerical methods for complex flows.</h1>
+    <p class="target-roles">Computational Physicist · CFD Engineer · Scientific Software Engineer</p>
     <p>I’m Baudouin Fonkwa, a Ph.D. in Mechanical Engineering and Scientific Computing. I develop numerical methods and scientific software for compressible multiphase flows and cavitation, with applications in biomedical and energy systems.</p>
-    <p class="muted">My work connects physical models, C++ implementations, and verification. I also explore scientific machine learning.</p>
+    <p class="muted">My work connects physical models, C++ implementations, and verification for compressible fluids and deformable solids.</p>
     <div class="hero-actions">
       <a class="button" href="#projects">Explore my work</a>
       <a class="button secondary" href="{{ '/cv/cv.pdf' | relative_url }}">View CV</a>
@@ -29,51 +30,38 @@ description: "Baudouin Fonkwa — computational fluid dynamics, multiphase flow,
 
 <section id="projects" class="section">
   <h2>Selected work</h2>
-  <p class="muted">Public software contributions, an interactive demo, and research summaries.</p>
+  <p class="muted">Two simulation projects and an interactive bubble-dynamics solver.</p>
 
-  <article class="card featured-project">
-    <p class="eyebrow">Open-source contribution</p>
-    <h3>COMPAS: six-equation multiphase flow</h3>
-    <p>My contribution focuses on <code>SIXEQS_IE_NPHASE</code>, the internal-energy formulation of the N-phase six-equation model: pressure, thermal, and chemical relaxation, generalized equations of state, and verification cases.</p>
-    <p class="muted">COMPAS is developed by the Scientific Computing and Flow Physics Laboratory at the University of Michigan. The links below distinguish my public fork from the upstream project.</p>
-    <p><strong>Stack:</strong> C++, AMReX, finite volume methods, MPI</p>
-    <div class="project-links">
-      <a href="{{ '/pages/project-compas' | relative_url }}">My contribution →</a>
-      <a href="https://github.com/baudouinfonkwa/COMPAS">Public fork ↗</a>
-      <a href="https://github.com/scfpl-umich/COMPAS">Upstream project ↗</a>
-    </div>
-  </article>
-
-  <div class="grid">
+  <div class="grid simulation-projects">
     <article class="card">
-      <p class="eyebrow">Interactive demo</p>
-      <h3>Rayleigh–Plesset Bubble Solver</h3>
-      <p class="muted">Explore how parameters affect bubble dynamics through numerical integration and live plots.</p>
-      <p><strong>Stack:</strong> JavaScript, RK4, Plotly, KaTeX</p>
-      <a href="{{ '/pages/bubble-solver' | relative_url }}">Explore the demo →</a>
+      <p class="eyebrow">Six-equation fluid solver</p>
+      <h3>Compressible multiphase flow</h3>
+      <video class="project-preview simulation-video" width="2264" height="1272" controls autoplay muted loop playsinline preload="metadata" aria-label="Droplet-impact density animation" poster="{{ '/assets/simulations/fluid-droplet-impact-poster.jpg' | relative_url }}">
+  <source src="{{ '/assets/simulations/fluid-droplet-impact.mp4' | relative_url }}" type="video/mp4">
+  <a href="{{ '/assets/simulations/fluid-droplet-impact.mp4' | relative_url }}">Download the simulation animation (MP4)</a>
+</video>
+      <p>Droplet-impact animation and my public COMPAS contribution: internal-energy N-phase modeling with pressure, thermal, and chemical relaxation.</p>
+      <p><strong>Stack:</strong> C++, AMReX, MPI</p>
+      <a href="{{ '/pages/project-compas' | relative_url }}">Fluid simulations &amp; public code →</a>
     </article>
     <article class="card">
-      <p class="eyebrow">Research</p>
-      <h3>Ghost Fluid Method for Fluid–Solid Impact</h3>
-      <p class="muted">A research summary of interface treatment for compressible multi-material flow with deformable solids.</p>
-      <p><strong>Focus:</strong> interface coupling, time integration</p>
-      <a href="{{ '/pages/project-gfm' | relative_url }}">Research summary →</a>
-    </article>
-    <article class="card">
-      <p class="eyebrow">Scientific machine learning</p>
-      <h3>Physics-Informed Neural Networks</h3>
-      <p class="muted">Experiments with PINNs for PDEs, adaptive architectures, and comparisons against reference solutions.</p>
-      <p><strong>Stack:</strong> Python, PyTorch</p>
-      <a href="{{ '/pages/project-pinns' | relative_url }}">Project summary →</a>
-    </article>
-    <article class="card">
-      <p class="eyebrow">Numerical methods</p>
-      <h3>Shallow Water on the Sphere</h3>
-      <p class="muted">Spectral methods using spherical harmonics, with attention to time stepping, stability, and accuracy.</p>
-      <p><strong>Stack:</strong> Python, NumPy</p>
-      <a href="{{ '/pages/project-swe-spectral' | relative_url }}">Project summary →</a>
+      <p class="eyebrow">Six-equation model</p>
+      <h3>Hyperelastic/viscoplastic solids</h3>
+      <video class="project-preview simulation-video" width="2264" height="1272" controls autoplay muted loop playsinline preload="metadata" aria-label="Bubble collapse near a deformable solid" poster="{{ '/assets/simulations/solid-bubble-collapse-poster.jpg' | relative_url }}">
+  <source src="{{ '/assets/simulations/solid-bubble-collapse.mp4' | relative_url }}" type="video/mp4">
+  <a href="{{ '/assets/simulations/solid-bubble-collapse.mp4' | relative_url }}">Download the simulation animation (MP4)</a>
+</video>
+      <p>Animation of shock-driven bubble collapse near a deformable solid, plus a rotating-solid example. Solver source remains private.</p>
+      <p><strong>Focus:</strong> compressible flow, hyperelastic solids</p>
+      <a href="{{ '/pages/project-sixeq-hypere' | relative_url }}">Fluid–solid simulation gallery →</a>
     </article>
   </div>
+  <article class="card featured-project">
+    <p class="eyebrow">Interactive bubble dynamics</p>
+    <h3>Rayleigh–Plesset &amp; Keller–Miksis</h3>
+    <p>Explore spherical bubble dynamics with viscosity, surface tension, and Neo-Hookean elasticity. Compare compressible and incompressible models, change the loading, and download the trajectory.</p>
+    <a href="{{ '/pages/bubble-solver' | relative_url }}">Run the bubble solver →</a>
+  </article>
 </section>
 
 <section class="section" aria-labelledby="publication-heading">
@@ -105,3 +93,5 @@ description: "Baudouin Fonkwa — computational fluid dynamics, multiphase flow,
     <li><a href="{{ '/cv/cv.pdf' | relative_url }}">View my CV</a></li>
   </ul>
 </section>
+
+<script defer src="{{ '/assets/js/simulation-media.js' | relative_url }}"></script>
